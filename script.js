@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 document.getElementById("location-form").addEventListener("submit", getWeather);
 
 function getWeather(e) {
@@ -14,7 +16,7 @@ function getWeather(e) {
   const errorDiv = document.getElementById("error");
 
   fetch(
-    `https://api.opencagedata.com/geocode/v1/json?q=${locationtofind}&key=ae02cce268e5463781c5d7291f8b1e75`
+    `https://api.opencagedata.com/geocode/v1/json?q=${locationtofind}&key=${process.env.KEY}`
   )
     .then((response) => {
       if (!response.ok) throw new Error("Error: Failed to fetch weather data");
@@ -28,7 +30,7 @@ function getWeather(e) {
       const long = data.results[0].geometry.lng;
 
       return fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=083ecd1226164dc2b514faadaa65d6d0`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${process.env.APPID}`
       );
     })
     .then((response) => {
