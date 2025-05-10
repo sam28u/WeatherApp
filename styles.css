@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+body {
+  background: linear-gradient(45deg, #249ea0, #44568c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+#name {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  font-size: xx-large;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+#weather-container {
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 80vh;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+#location-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 500px;
+  min-width: 280px;
+  justify-content: center;
+}
+input {
+  flex: 1;
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+button {
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 7px;
+  box-sizing: border-box;
+  background-color: #fb5432;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #ff7755;
+}
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+  }
+
+  input,
+  button {
+    width: 100%;
+    height: 45px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
+
+#error {
+  width: 100%;
+  height: 80%;
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+#weather-data {
+  width: 100%;
+  height: 80%;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#city {
+  font-size: xx-large;
+  margin-bottom: 70px;
+  font-weight: 700;
+  text-align: center;
+}
+#weather-status > span:nth-child(1) {
+  font-size: x-large;
+  font-weight: 500;
+}
+#weather-status > span:nth-child(2) {
+  font-size: small;
+  font-weight: 100;
+}
+#weather-status {
+  font-size: larger;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#temperature {
+  font-size: large;
+}
+
+#feels-like {
+  font-size: small;
+  font-weight: 100;
+}

@@ -1,0 +1,1 @@
+document.getElementById("location-form").addEventListener("submit", getWeather);

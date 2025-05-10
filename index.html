@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <!-- Make the weather app containers and form here -->
+
+    <div id="name">Weather App</div>
+    <div id="weather-container">
+      <div id="location-form">
+        <form action="">
+          <input type="text" id="location-input" placeholder="Enter a city" />
+          <button type="submit">Get Weather</button>
+        </form>
+      </div>
+      <div id="error"></div>
+      <div id="weather-data">
+        <span id="city">city</span>
+
+        <span id="weather-status">
+          <span>clouds</span>
+          <span>clouds</span>
+        </span>
+        <div>
+          <span id="temperature">temp</span>
+        </div>
+        <div>
+          <span id="feels-like"></span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
